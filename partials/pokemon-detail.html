@@ -1,0 +1,14 @@
+<div class="burst-12"></div>
+<div class="content">
+    <a href="{{pokemon.largeImage}}" ng-if="pokemon.largeImage" target="_blank"><img src="{{pokemon.largeImage}}"/></a>
+    <img ng-if="!pokemon.largeImage" src="http://pokeapi.co/media/img/{{pokemonId}}.png"/>
+    <h2>{{pokemon.name}}</h2>
+    <ul>
+        <li>Types: <span ng-repeat="type in pokemon.types">{{type.name}} </span></li>
+        <li>Attack: {{pokemon.attack}}</li>
+        <li>Defense: {{pokemon.defense}}</li>
+        <li>HP: {{pokemon.hp}}</li>
+        <li ng-repeat="evolution in pokemon.evolutions">Evolves at level: {{evolution.level}}</li>
+    </ul>
+</div>
+

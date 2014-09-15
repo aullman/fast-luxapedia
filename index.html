@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="luxapedia">
+    <head>
+        <title>Fast Bulbapedia</title>
+        <link href='http://fonts.googleapis.com/css?family=Exo:800' rel='stylesheet' type='text/css'>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.24/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.2.24/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="https://code.angularjs.org/1.2.24/angular-resource.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/services.js" type="text/javascript"></script>
+        <script src="js/controllers.js" type="text/javascript"></script>
+    </head>
+    <body>
+    <div class="background"></div>
+    <div class="main">
+        <h1 class="heading">
+            Fast Luxapedia!
+        </h1>
+    </div>
+    <div class="pokedex" ng-controller="PokedexCtrl">
+        <input type="text" ng-model="search" class="search" placeholder="Search pokemon"></input>
+        <ul>
+            <li style="list-style: none">
+                <a ng-href="#{{pokemon.uri}}" class="name"></a>
+            </li>
+            <a ng-repeat="pokemon in pokedex | filter:search | orderBy: 'id'" ng-href="#{{pokemon.uri}}" class="name">
+            <li class="{{pokemon.type}}">
+                <img ng-src="{{pokemon.image}}"> <span class="name">{{pokemon.name}}</span>
+            </li>
+            </a>
+        </ul>
+    </div>
+    <div class="details" ng-class="{shown: shown}" ng-view></div>
+	</body>
+</html>

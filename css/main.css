@@ -1,0 +1,170 @@
+div.background {
+    background-image: url('../images/luxray.png');
+    background-repeat: no-repeat;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+div.main {
+    text-align: center;
+}
+h1.heading {
+    font-family: 'Exo', sans-serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #FDDC32;
+    position: relative;
+    z-index: 99;
+    margin-left: 80px;
+}
+div.pokedex {
+    position: absolute;
+    top: 80px;
+    left: 10px;
+}
+div.pokedex ul {
+    text-align: center;
+}
+div.pokedex ul li {
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    list-style: none;
+    font-size: 22px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+/* Types */
+div.pokedex ul li.electric {
+    background-color: rgba(253, 220, 50, 0.8);
+}
+div.pokedex ul li.fire {
+    background-color: rgba(232, 46, 24, 0.8);
+}
+div.pokedex ul li.dark {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+div.pokedex ul li.psychic {
+    background-color: rgba(128, 68, 153, 0.8);
+}
+div.pokedex ul li.grass {
+    background-color: rgba(86, 179, 79, 0.8);
+}
+div.pokedex ul li.fighting {
+    background-color: rgba(192, 96, 24, 0.8);
+}
+div.pokedex ul li.flying {
+    background-color: rgba(229, 222, 224, 0.8);
+}
+div.pokedex ul li.normal {
+    background-color: rgba(153, 153, 153, 0.8);
+}
+div.pokedex ul li.water {
+    background-color: rgba(160, 194, 241, 0.8);
+}
+div.pokedex ul li.dragon {
+    background-color: rgba(218, 168, 74, 0.8);
+}
+div.pokedex ul li.steel {
+    background-color: rgba(85, 85, 85, 0.8);
+}
+div.pokedex ul li.ice {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+div.pokedex ul li.rock {
+    background-color: rgba(191, 126, 78, 0.8);
+}
+div.pokedex ul li.bug {
+    background-color: rgba(158, 216, 96, 0.8);
+}
+div.pokedex ul li.poison {
+    background-color: rgba(193, 126, 237, 0.8);
+}
+div.pokedex ul li.ground {
+    background-color: rgba(233, 214, 128, 0.8);
+}
+div.pokedex ul li.fairy {
+    background-color: rgba(248, 179, 197, 0.8);
+}
+div.pokedex ul li.ghost {
+    background-color: rgba(234, 234, 234, 0.8);
+}
+/*End Types*/
+
+input.search {
+  position: absolute;
+  left: 40px;
+  width: 210px;
+  height: 20px;
+}
+
+div.pokedex ul li img {
+    height: 100px;
+    display:block;
+    margin: auto;
+}
+div.pokedex ul a {
+    text-decoration: none;
+    color: black;
+}
+div.details {
+    position: fixed;
+    left: 410px;
+    top: 200px;
+    z-index: 99;
+    width: 400px;
+    height: 400px;
+    padding: 20px;
+}
+div.details {
+  -webkit-animation: flyin 1.2s ease forwards;
+  opacity: 0;
+  -webkit-transform: scale(0);
+}
+@-webkit-keyframes flyin {
+   to { 
+     -webkit-transform: scale(1);
+     opacity: 0.95;
+   }
+}
+div.details div.content {
+    position: relative;
+}
+div.details div.content img {
+  max-height: 200px;
+  margin: auto;
+}
+.burst-12 {
+    background: grey;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+}
+.burst-12:before, .burst-12:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 400px;
+    width: 400px;
+    background: grey;
+}
+.burst-12:before {
+    -webkit-transform: rotate(30deg);
+       -moz-transform: rotate(30deg);
+        -ms-transform: rotate(30deg);
+         -o-transform: rotate(30deg);
+}
+.burst-12:after {
+    -webkit-transform: rotate(60deg);
+       -moz-transform: rotate(60deg);
+        -ms-transform: rotate(60deg);
+         -o-transform: rotate(60deg);
+}
