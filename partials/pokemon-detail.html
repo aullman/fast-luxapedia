@@ -8,7 +8,7 @@
         <li>Attack: {{pokemon.attack}}</li>
         <li>Defense: {{pokemon.defense}}</li>
         <li>HP: {{pokemon.hp}}</li>
-        <li ng-repeat="evolution in pokemon.evolutions">Evolves at level: {{evolution.level}}</li>
+        <li ng-repeat="evolution in pokemon.evolutions">Evolves into <a href='#/pokemon/{{evolution.id}}'>{{evolution.name}}</a> <span ng-if="evolution.level">at level: {{evolution.level}}</span></li>
     </ul>
 </div>
 
