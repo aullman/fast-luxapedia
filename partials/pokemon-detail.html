@@ -8,7 +8,12 @@
         <li>Attack: {{pokemon.attack}}</li>
         <li>Defense: {{pokemon.defense}}</li>
         <li>HP: {{pokemon.hp}}</li>
-        <li ng-repeat="evolution in pokemon.evolutions">Evolves into <a href='#/pokemon/{{evolution.id}}'>{{evolution.name}}</a> <span ng-if="evolution.level">at level: {{evolution.level}}</span></li>
+        <li ng-if-"!pokemon.evolutions.length">Does not evolve</li>
+        <li ng-repeat="evolution in pokemon.evolutions">Evolves into <a href='#/pokemon/{{evolution.id}}'>{{evolution.name}}</a> 
+         <span ng-if="evolution.level">at level: {{evolution.level}}</span>
+         <span ng-if="evolution.detail">by {{evolution.detail}}</span>
+         <span ng-if="evolution.method != 'other' && evolution.method != 'level_up'">by {{evolution.method}}</span></li>
+        <li><a href="http://bulbapedia.bulbagarden.net/wiki/{{pokemon.name}}" target="_blank">More Information</a></li>
     </ul>
 </div>
 

@@ -11,8 +11,10 @@ div.background {
 div.main {
     text-align: center;
 }
-h1.heading {
+h1,h2,h3,h4,h5 {
     font-family: 'Exo', sans-serif;
+}
+h1.heading {
     font-size: 64px;
     font-weight: bold;
     color: #FDDC32;
@@ -134,6 +136,14 @@ div.details {
 }
 div.details div.content {
     position: relative;
+}
+div.content ul {
+    padding-top: 0;
+    margin-top: 0;
+}
+div.content h2 {
+    padding: 0;
+    margin: 0;
 }
 div.details div.content img {
   max-height: 200px;
