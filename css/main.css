@@ -99,7 +99,8 @@ input.search {
   position: absolute;
   left: 40px;
   width: 210px;
-  height: 20px;
+  height: 30px;
+  z-index: 999;
 }
 
 div.pokedex ul li img {
